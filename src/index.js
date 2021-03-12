@@ -1,9 +1,17 @@
-module.exports = function reverse (n) {
-  if(n<0){
-    let res = Math.abs(n)
-    res = String(res).split('').reverse().join('')
-    return res
+
+// You should implement your task here.
+
+module.exports = function towelSort (matrix) {
+  let sort = []
+  if(matrix == undefined){
+    return []
   }
-  n = String(n).split('').reverse().join('');
-  return n;
+  for (let i = 0; i < matrix.length; i++){
+    if (i % 2 !== 0){
+      matrix[i] = matrix[i].reverse()
+    } 
+  sort = sort.concat(matrix[i])
+  }
+  return sort
 }
+
